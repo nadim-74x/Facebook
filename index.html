@@ -4,113 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facebook Login</title>
-        <style>
-       
-         body {
-            font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, rgba(242, 246, 255, 1) 0%, rgba(231, 245, 255, 1) 100%);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100vh;
-            overflow: hidden;
-        }
+    <style>body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
 
-        .language {
-            font-size: 14px;
-            color: #606770;
-            text-align: center;
-            margin: 15px 0;
-        }
+.container {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 320px;
+    padding: 20px;
+}
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            max-width: 400px;
-            padding: 20px;
-            box-sizing: border-box;
-            margin: 0 auto;
-        }
+.logo-container {
+    margin-bottom: 20px;
+}
 
-        .logo-container {
-            margin-bottom: 20px;
-        }
+.logo {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 36px;
+    color: #1877f2;
+}
 
-        .logo {
-            width: 50px;
-        }
+.slogan {
+    color: #555;
+    font-size: 14px;
+    margin-top: 5px;
+}
 
-        .input-field {
-            width: 100%;
-            padding: 16px;
-            margin: 10px 0;
-            border: 1px solid #dddfe2;
-            border-radius: 10px;
-            font-size: 17px;
-            box-sizing: border-box;
-        }
+.form-container {
+    text-align: center;
+}
 
-        .login-btn {
-            width: 100%;
-            padding: 12px;
-            background-color: #1877f2;
-            color: white;
-            border: none;
-            border-radius: 20px;
-            font-size: 17px;
-            cursor: pointer;
-            margin-top: 10px;
-        }
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
 
-        .login-btn:hover {
-            background-color: #155db2;
-        }
+.login-button {
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 12px 0;
+}
 
-        .forgot-password {
-            display: block;
-            margin-top: 20px;
-            font-size: 15px;
-            color: black;
-            text-decoration: none;
-        }
+.login-button:hover {
+    background-color: #0e5ace;
+}
 
-        .create-account-btn {
-            display: inline-block;
-            padding: 12px 0;
-            width: 85%;
-            border: 1px solid #1877f2;
-            color: #1877f2;
-            border-radius: 20px;
-            background-color: transparent;
-            font-size: 17px;
-            cursor: pointer;
-            margin-top: 60px;
-        }
+a {
+    text-decoration: none;
+    color: #1877f2;
+    font-size: 14px;
+}
 
-        .create-account-btn:hover {
-            background-color: #e7f3ff;
-        }
+.divider {
+    margin: 12px 0;
+    border-top: 1px solid #ddd;
+}
 
-        .meta-logo {
-            font-size: 14px;
-            color: #606770;
-            display: flex;
-            justify-content: center;
-            font-weight: bold;
-            align-items: center;
-            margin: 20px 0;
-        }
+.no-social-login {
+    font-size: 14px;
+    margin-top: 16px;
+}
 
-        .meta-logo img {
-            width: 60px;
-            margin-right: 8px;
-        }
-    </style>
+.no-social-login a {
+    font-weight: bold;
+    color: #1877f2;
+}
+
+.no-social-login a:hover {
+    text-decoration: underline;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 5px;
+    padding: 15px;
+    z-index: 1;
+}
+
+.popup-content {
+    position: relative;
+}
+
+.popup-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}</style>
 </head>
 <body>
     <div class="container">
